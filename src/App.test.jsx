@@ -1,9 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import React from 'react';
-import App from './App';
+// @ts-check
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Card from './App';
+
+test('Card', () => {
+  const component = renderer.create(<Card />);
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });

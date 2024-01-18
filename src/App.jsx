@@ -1,5 +1,11 @@
 import React from 'react';
 
-export default class extends React.Component {
-
+function App() {
+  return (
+    <div>
+      empty
+    </div>
+  );
 }
+
+export default App;
